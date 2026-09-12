@@ -1,60 +1,35 @@
 (() => {
-  const storageKey = 'humancomms-theme';
-  const media = window.matchMedia('(prefers-color-scheme: dark)');
-  let manual = false;
+  const root = document.documentElement;
+  const key = 'humancomms-theme';
+  const systemTheme = () => matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-  const systemTheme = () => media.matches ? 'dark' : 'light';
+  let theme;
+  try { theme = localStorage.getItem(key); } catch {}
+  if (theme !== 'light' && theme !== 'dark') theme = systemTheme();
 
-  function applyTheme(theme) {
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.style.colorScheme = theme;
-  }
+  root.dataset.theme = theme;
+  root.style.colorScheme = theme;
 
-  try {
-    const stored = localStorage.getItem(storageKey);
-    if (stored === 'light' || stored === 'dark') {
-      manual = true;
-      applyTheme(stored);
-    } else {
-      applyTheme(systemTheme());
-    }
-  } catch {
-    applyTheme(systemTheme());
-  }
+  addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.theme-toggle');
+    if (!button) return;
+    const icon = button.querySelector('span');
 
-  function createToggle() {
-    const nav = document.querySelector('.nav-links');
-    if (!nav || nav.querySelector('.theme-toggle')) return;
-
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'theme-toggle';
-    button.innerHTML = '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/></svg><svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>';
-
-    function syncLabel() {
-      const current = document.documentElement.dataset.theme || systemTheme();
-      const target = current === 'dark' ? 'light' : 'dark';
-      button.setAttribute('aria-label', `Switch to ${target} theme`);
-      button.title = `Switch to ${target} theme`;
-    }
+    const sync = () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      icon.textContent = root.dataset.theme === 'dark' ? '☀' : '☾';
+      button.setAttribute('aria-label', `Switch to ${next} theme`);
+      button.title = `Switch to ${next} theme`;
+    };
 
     button.addEventListener('click', () => {
-      const current = document.documentElement.dataset.theme || systemTheme();
-      const next = current === 'dark' ? 'light' : 'dark';
-      manual = true;
-      applyTheme(next);
-      try { localStorage.setItem(storageKey, next); } catch {}
-      syncLabel();
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      root.style.colorScheme = next;
+      try { localStorage.setItem(key, next); } catch {}
+      sync();
     });
 
-    syncLabel();
-    nav.append(button);
-  }
-
-  media.addEventListener?.('change', () => {
-    if (!manual) applyTheme(systemTheme());
+    sync();
   });
-
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', createToggle, { once: true });
-  else createToggle();
 })();

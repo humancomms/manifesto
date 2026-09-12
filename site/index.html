@@ -3,41 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Human Comms Manifesto: preserve human connection, authorship, judgment, and accountability in written communication.">
+  <meta name="description" content="The Human Comms Manifesto.">
   <title>Human Comms Manifesto</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/edwardtufte/tufte-css@b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1/tufte.css">
   <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/assets/theme.js"></script>
+  <script src="/assets/theme.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <nav aria-label="Primary navigation">
-      <div class="nav-links">
-        <a href="/" aria-current="page">Manifesto</a>
-        <a href="/research/">Research</a>
-        <a href="/similar-work/">Similar work</a>
-        <a href="/signatures/">Signatures</a>
-        <a href="https://github.com/humancomms/manifesto">GitHub</a>
-      </div>
-    </nav>
-  </div>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="/" aria-current="page">Manifesto</a>
+    <a href="/research/">Research</a>
+    <a href="/similar-work/">Similar work</a>
+    <a href="/signatures/">Signatures</a>
+    <span class="nav-end"><a href="https://github.com/humancomms/manifesto">GitHub</a><button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme"><span aria-hidden="true">☾</span></button></span>
+  </nav>
 </header>
-
-<main class="wrap">
-  <article class="manifesto">
+<main>
+  <article>
+    <section class="manifesto">
 <!-- MANIFESTO_CONTENT -->
+    </section>
   </article>
-
-  <div class="actions manifesto-actions">
-    <a class="button" href="/signatures/">Sign the manifesto</a>
-    <a class="button" href="/research/">Read the research</a>
-  </div>
 </main>
-
-<footer>
-  <div class="wrap footer-row">
-    <span><a href="https://github.com/humancomms/manifesto">Source on GitHub</a></span>
-  </div>
-</footer>
+<footer class="site-footer"><a href="https://github.com/humancomms/manifesto">Source on GitHub</a></footer>
 </body>
 </html>
