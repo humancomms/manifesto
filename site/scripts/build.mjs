@@ -32,9 +32,30 @@ function renderInline(value) {
   return text;
 }
 
+function headingText(value) {
+  return value
+    .replace(/\[([^\]]+)]\([^)]+\)/g, '$1')
+    .replace(/[*_`]/g, '')
+    .trim();
+}
+
+function headingId(value, usedIds) {
+  const base = headingText(value)
+    .normalize('NFKD')
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'section';
+
+  const count = (usedIds.get(base) || 0) + 1;
+  usedIds.set(base, count);
+  return count === 1 ? base : `${base}-${count}`;
+}
+
 function renderMarkdown(markdown) {
   const lines = markdown.replaceAll('\r\n', '\n').split('\n');
   const html = ['<section class="hero">'];
+  const usedIds = new Map();
   let paragraph = [];
   let list = [];
   let inHero = true;
@@ -87,7 +108,9 @@ function renderMarkdown(markdown) {
         html.push('</section>', '<section>');
         inHero = false;
       }
-      html.push(`<h${level}>${renderInline(heading[2])}</h${level}>`);
+      const label = headingText(heading[2]);
+      const id = headingId(heading[2], usedIds);
+      html.push(`<h${level} id="${id}">${renderInline(heading[2])}<a class="heading-anchor" href="#${id}" aria-label="Link to ${escapeHtml(label)}">#</a></h${level}>`);
       continue;
     }
 

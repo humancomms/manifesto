@@ -1,4 +1,4 @@
-# No AI in Human Communication.
+# No AI in Human Communication
 
 Human communication is not just information transfer. It is how we build trust, familiarity, empathy, and connection.
 
