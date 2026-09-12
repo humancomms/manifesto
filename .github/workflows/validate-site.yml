@@ -1,16 +1,17 @@
-name: Validate signatures
+name: Validate site
 
 on:
   pull_request:
     paths:
+      - 'MANIFESTO.md'
+      - 'site/**'
       - 'signatories/**'
-      - 'site/scripts/validate-signatories.mjs'
 
 permissions:
   contents: read
 
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +19,4 @@ jobs:
         with:
           node-version: 22
       - run: node site/scripts/validate-signatories.mjs
+      - run: node site/scripts/build.mjs

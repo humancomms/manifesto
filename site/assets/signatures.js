@@ -11,8 +11,13 @@ function safeLink(url, label) {
   const anchor = document.createElement('a');
   anchor.href = url;
   anchor.textContent = label;
-  anchor.rel = 'noopener noreferrer';
+  anchor.rel = 'noopener noreferrer nofollow ugc';
   return anchor;
+}
+
+function appendHandle(detail, url, label) {
+  if (detail.childNodes.length > 0) detail.append(' · ');
+  detail.append(safeLink(url, label));
 }
 
 function renderSignature(signature) {
@@ -20,17 +25,17 @@ function renderSignature(signature) {
   const name = document.createElement('span');
   const detail = document.createElement('span');
   detail.className = 'detail';
-
-  if (signature.url) {
-    name.append(safeLink(signature.url, signature.name));
-  } else {
-    name.textContent = signature.name;
-  }
+  name.textContent = signature.name;
 
   if (kind === 'individuals') {
-    detail.append(safeLink(`https://github.com/${signature.github}`, `@${signature.github}`));
+    appendHandle(detail, `https://github.com/${signature.github}`, `GitHub @${signature.github}`);
+    if (signature.linkedin) appendHandle(detail, `https://www.linkedin.com/in/${signature.linkedin}`, 'LinkedIn');
+    if (signature.x) appendHandle(detail, `https://x.com/${signature.x}`, `X @${signature.x}`);
   } else {
-    detail.textContent = `signed by @${signature.signedBy}`;
+    appendHandle(detail, `https://github.com/${signature.signedBy}`, `signed by @${signature.signedBy}`);
+    if (signature.github) appendHandle(detail, `https://github.com/${signature.github}`, 'GitHub');
+    if (signature.linkedin) appendHandle(detail, `https://www.linkedin.com/company/${signature.linkedin}`, 'LinkedIn');
+    if (signature.x) appendHandle(detail, `https://x.com/${signature.x}`, `X @${signature.x}`);
   }
 
   item.append(name, detail);

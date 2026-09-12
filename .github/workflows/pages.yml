@@ -22,8 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/validate-signatories.mjs
-      - run: node scripts/build.mjs
+      - run: node site/scripts/validate-signatories.mjs
+      - run: node site/scripts/build.mjs
       - uses: actions/configure-pages@v5
         with:
           enablement: true

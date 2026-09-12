@@ -1,11 +1,16 @@
-## Summary
+## What does this change?
 
-Describe the change briefly.
+Briefly describe the change and why it is needed.
 
-## Signature submissions
+## If this changes MANIFESTO.md
 
-If this pull request adds a signature:
+- [ ] I changed the manifesto only in `MANIFESTO.md`.
+- [ ] I considered the effect on existing signatories and explained any material change.
 
-- [ ] I have read and adopted the Human Comms Manifesto.
-- [ ] The identity information in this pull request is accurate.
-- [ ] For an organization signature, I am authorized to make this adoption statement on its behalf.
+## If this adds a signature
+
+- [ ] I have read the current `MANIFESTO.md` and adopt it.
+- [ ] I am the represented individual, or I am authorized to sign for the represented organization.
+- [ ] I understand the signature is public Git history.
+
+Signature-removal pull requests do not require an explanation.

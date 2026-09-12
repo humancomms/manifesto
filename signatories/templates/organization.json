@@ -1,6 +1,7 @@
 {
   "name": "Organization Name",
   "signedBy": "your-github-username",
-  "url": "https://example.org",
-  "github": "organization-github-handle"
+  "github": "organization-github-handle",
+  "linkedin": "organization-linkedin-slug",
+  "x": "organization_x_handle"
 }
