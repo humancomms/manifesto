@@ -18,5 +18,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: site/requirements.txt
+      - run: python -m pip install -r site/requirements.txt
       - run: node site/scripts/validate-signatories.mjs
-      - run: node site/scripts/build.mjs
+      - run: python site/scripts/build.py

@@ -3,9 +3,7 @@
   const media = window.matchMedia('(prefers-color-scheme: dark)');
   let manual = false;
 
-  function systemTheme() {
-    return media.matches ? 'dark' : 'light';
-  }
+  const systemTheme = () => media.matches ? 'dark' : 'light';
 
   function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
@@ -31,9 +29,7 @@
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'theme-toggle';
-    button.innerHTML = `
-      <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-      <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>`;
+    button.innerHTML = '<svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.5 8.5 0 1 0 20.2 15.3Z"/></svg><svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>';
 
     function syncLabel() {
       const current = document.documentElement.dataset.theme || systemTheme();
@@ -55,15 +51,10 @@
     nav.append(button);
   }
 
-  if (media.addEventListener) {
-    media.addEventListener('change', () => {
-      if (!manual) applyTheme(systemTheme());
-    });
-  }
+  media.addEventListener?.('change', () => {
+    if (!manual) applyTheme(systemTheme());
+  });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createToggle, { once: true });
-  } else {
-    createToggle();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', createToggle, { once: true });
+  else createToggle();
 })();

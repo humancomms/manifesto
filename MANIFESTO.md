@@ -1,5 +1,7 @@
 # No AI in Human Communication
 
+This manifesto is adopted and signed by individuals and teams who share these principles and commit to communicating with each other as humans.
+
 Human communication is not just information transfer. It is how we build trust, familiarity, empathy, and connection.
 
 *Think with AI. Speak for yourself.*
