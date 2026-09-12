@@ -25,6 +25,8 @@ jobs:
       - run: node scripts/validate-signatories.mjs
       - run: node scripts/build.mjs
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
