@@ -77,6 +77,9 @@ def bust_assets() -> None:
     versions = {
         '/assets/styles.css': asset_version(OUTPUT / 'assets' / 'styles.css'),
         '/assets/theme.js': asset_version(OUTPUT / 'assets' / 'theme.js'),
+        '/assets/logo-light.svg': asset_version(OUTPUT / 'assets' / 'logo-light.svg'),
+        '/assets/logo-dark.svg': asset_version(OUTPUT / 'assets' / 'logo-dark.svg'),
+        '/assets/favicon.svg': asset_version(OUTPUT / 'assets' / 'favicon.svg'),
     }
     for page in OUTPUT.rglob('*.html'):
         content = page.read_text(encoding='utf-8')

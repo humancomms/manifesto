@@ -9,12 +9,24 @@ html[data-theme="dark"] body { background-color: #151515; color: #ddd; }
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: .55rem 1.2rem;
+  gap: .55rem 1.05rem;
   font-size: 1.08rem;
   line-height: 1.4;
 }
 .site-nav a { text-decoration: none; }
 .site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: .2em; }
+.site-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  flex: 0 0 auto;
+}
+.site-mark img { display: block; width: 100%; height: 100%; }
+.site-mark-dark { display: none !important; }
+html[data-theme="dark"] .site-mark-light { display: none !important; }
+html[data-theme="dark"] .site-mark-dark { display: block !important; }
 .nav-end { display: inline-flex; align-items: center; gap: .65rem; white-space: nowrap; }
 .theme-toggle {
   border: 0;
@@ -60,7 +72,8 @@ html[data-theme="dark"] .muted { color: #aaa; }
   .subtitle,
   .signature-header { width: 100%; }
   .signature-list { width: 90%; }
-  .site-nav { gap: .45rem 1rem; font-size: 1rem; }
+  .site-nav { gap: .45rem .85rem; font-size: 1rem; }
+  .site-mark { width: 1.9rem; height: 1.9rem; }
   article { padding-top: 2.5rem; padding-bottom: 3rem; }
   h1 { font-size: 2.65rem; }
   h2 { font-size: 1.9rem; }
