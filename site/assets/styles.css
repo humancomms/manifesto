@@ -27,18 +27,46 @@ html[data-theme="dark"] body { background-color: #151515; color: #ddd; }
 .site-mark-dark { display: none !important; }
 html[data-theme="dark"] .site-mark-light { display: none !important; }
 html[data-theme="dark"] .site-mark-dark { display: block !important; }
+.nav-menu { display: contents; }
 .nav-end { display: inline-flex; align-items: center; gap: .65rem; white-space: nowrap; }
-.theme-toggle {
+.theme-toggle,
+.menu-toggle {
   border: 0;
   background: transparent;
   color: inherit;
   padding: 0;
   font: inherit;
-  font-size: 1.15rem;
-  line-height: 1;
   cursor: pointer;
 }
-.theme-toggle:hover { opacity: .65; }
+.theme-toggle {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+.theme-toggle:hover,
+.menu-toggle:hover { opacity: .65; }
+.menu-toggle {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.menu-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+}
+.menu-icon span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transition: transform .16s ease, opacity .16s ease;
+}
+.site-nav.is-open .menu-icon span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.site-nav.is-open .menu-icon span:nth-child(2) { opacity: 0; }
+.site-nav.is-open .menu-icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 .manifesto > h1:first-child { margin-top: 0; }
 .heading-anchor {
@@ -72,8 +100,28 @@ html[data-theme="dark"] .muted { color: #aaa; }
   .subtitle,
   .signature-header { width: 100%; }
   .signature-list { width: 90%; }
-  .site-nav { gap: .45rem .85rem; font-size: 1rem; }
+  .site-nav {
+    justify-content: space-between;
+    gap: 0;
+    font-size: 1rem;
+  }
   .site-mark { width: 1.9rem; height: 1.9rem; }
+  .menu-toggle { display: inline-flex; margin-left: auto; }
+  .site-nav > a:not(.site-mark),
+  .site-nav > .nav-end { display: none; }
+  .nav-menu {
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .15rem;
+    margin-top: .7rem;
+  }
+  .site-nav.is-open .nav-menu { display: flex; }
+  .nav-menu > a,
+  .nav-menu > .nav-end { padding: .38rem 0; }
+  .nav-end { display: flex; }
   article { padding-top: 2.5rem; padding-bottom: 3rem; }
   h1 { font-size: 2.65rem; }
   h2 { font-size: 1.9rem; }
