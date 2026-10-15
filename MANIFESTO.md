@@ -1,85 +1,100 @@
 # No AI in Human Communication
 
-This manifesto is adopted and signed by individuals and teams who share these principles and commit to communicating with each other as humans.
+This manifesto draws a clear boundary between **human-to-human communication** and **work artifacts**.
 
-Human communication is not just information transfer. It is how we build trust, familiarity, empathy, and connection.
+Here, human communication means a message presented as one person speaking to another: a conversation, email, chat message, comment, feedback, disagreement, appreciation, apology, support, or leadership communication.
 
-*Think with AI. Speak for yourself.*
+Those messages are written by humans, without AI generating, rewriting, or polishing them.
 
-How we explain something, disagree, give feedback, show appreciation, apologize, or change our minds teaches others who we are and how we think.
+Reports, specifications, analyses, documentation, and similar work artifacts are different. AI may assist with them, but its involvement is made visible.
 
-Our effort, judgment, wording, imperfections, and intent are part of the message.
+Individuals and teams who sign this manifesto commit to preserving that distinction.
 
-**Human connection is a quality of good communication, not overhead.**
+## Human communication is human-written
 
-Research increasingly suggests that outsourcing interpersonal communication to AI can carry relational costs, including lower perceived warmth, effort, authenticity, reciprocity, and willingness to forgive. [See the evidence and its limits.](https://humancomms.org/research/)
+Behind every name, face, or avatar should be a person speaking for themselves - not AI masquerading as one.
 
-## Don't outsource the relationship
+Human communication is more than information transfer. It carries attention, effort, judgment, personality, uncertainty, care, and intent. Our wording and imperfections are part of how others know us.
 
-If one person generates a message with AI and the other generates the response with AI, we can end up with **AIs talking to each other, masquerading as us.**
+When a message is presented as coming from us, we write it ourselves. We do not ask AI to generate, rewrite, polish, soften, intensify, or impersonate our voice.
 
-The messages may become more polished while the people become less involved.
+**Authenticity does not require perfect writing. It requires the person to be present.**
 
-Teams and relationships need us to experience how each other actually thinks, explains, disagrees, asks questions, resolves conflict, and communicates uncertainty.
+Research increasingly suggests that AI-mediated interpersonal messages can reduce perceived effort, warmth, authenticity, reciprocity, and willingness to forgive. [See the evidence and its limits.](https://humancomms.org/research/)
 
-**AI can improve the text while degrading the human signal behind it.**
+## Do not normalize AI masquerading as people
 
-If someone needs AI to summarize your AI-generated message before they can respond, something has already gone wrong.
+If one person delegates a message to AI and the other delegates the response, the conversation may become **AIs talking to each other, masquerading as us.**
 
-## Write first. Use AI second.
+Signatories do not reward that behavior by continuing the exchange as though it were human communication.
 
-Form the thought and the core message yourself.
+When a message is clearly AI-generated and presented as personal communication, ask the sender to restate it in their own words, or pause the exchange until they do.
 
-Then use AI if useful: challenge your reasoning, find blind spots, proofread, translate, shorten, or improve clarity.
+This is not hostility toward the person, and it is not a test of writing style. Do not accuse someone based on suspicion alone.
 
-**Assistance is different from delegation.**
+It is a form of social resistance: refusing to normalize hidden machines as participants in human relationships.
 
-AI should help you communicate your thinking, not manufacture it for you. Fluency is not a substitute for relevance or context.
+## AI-assisted work artifacts are visibly marked
 
-## Don't borrow expertise
+Technical reports, specifications, analyses, research summaries, documentation, meeting notes, and similar work artifacts are different from personal messages. AI may assist or generate them.
 
-AI makes it easy to sound authoritative about things we do not actually understand.
+Material AI involvement must be visible before the reader relies on the artifact.
 
-Do not use that borrowed authority to preach, correct, or educate someone about something you cannot independently evaluate.
+Use clear labels:
 
-**If you send it, own it.** Understand the claims. Understand the terminology. Be able to judge whether they are correct.
+- **AI-assisted:** A human created the substance or first draft, and AI materially revised, expanded, reorganized, or clarified it.
+- **AI-generated:** AI produced most of the artifact, and a human reviewed and approved it.
 
-A simple test: **Can you answer the first reasonable follow-up yourself?**
+The label belongs near the title or at the beginning - not buried in metadata or a footnote.
 
-If not, reconsider making the claim.
+A human-written message may share a labeled AI-assisted artifact. The artifact and the interpersonal message are different layers; the message itself remains human-written.
 
-## Do the thinking work before you send
+## Writing is thinking
 
-AI makes producing 1,000 words almost free. Reading them is not.
+When a work artifact is meant to represent human analysis, judgment, or expertise, write the first version yourself.
 
-Do not externalize your thinking effort onto everyone else. Organize the thought, remove noise, provide the necessary context, and compress the message before sending it.
+Writing forces you to decide what you know, what you believe, how the reasoning connects, and where uncertainty remains.
+
+Use AI afterward to challenge the reasoning, identify gaps, reorganize, shorten, proofread, or improve clarity.
+
+If AI supplies the substance and reasoning, mark the artifact as **AI-generated**. Do not present model fluency as your own understanding.
+
+## Disclosure does not remove responsibility
+
+If you publish or circulate an artifact, you own its consequences even when AI helped create it.
+
+Verify the facts, sources, calculations, and citations. Understand the terminology and claims. Be able to explain the reasoning, its limits, and the first reasonable follow-up without asking AI to reconstruct the argument for you.
+
+**AI-generated confidence is not expertise.**
+
+## Respect human attention
+
+AI makes text cheap to produce. Reading still costs human time.
+
+Do the compression before you publish. Remove noise. Include relevant context. Do not save your own time by transferring the thinking work to every reader.
 
 **AI-generated volume is cheap. Human attention isn't.**
 
-## Communication is a skill. Keep practicing it.
+## Before you send or publish
 
-Writing clearly, adapting to another person, explaining your reasoning, disagreeing constructively, and navigating difficult conversations are skills worth preserving.
+For interpersonal communication:
 
-Use AI to improve those abilities, not gradually stop exercising them.
+- Did I write this message myself?
+- Is the other person hearing me, or a model acting through me?
+- Am I using AI to simulate care, confidence, empathy, or expertise?
 
-## Before you send
+For a work artifact:
 
-- Did the core thought come from me?
-- Is this grounded in the actual context?
-- Does it sound like me?
-- Do I understand and stand behind the important claims?
-- Can I handle the first reasonable follow-up myself?
+- Is material AI involvement clearly labeled?
+- Did I write and think first where the artifact represents my judgment?
+- Do I understand and stand behind every important claim?
+- Can I answer a reasonable follow-up myself?
 - Did I respect the reader's time?
-- Am I communicating with this person, or making AI communicate for me?
 
-## The principle
+## The commitment
 
-Use AI to think better. Challenge yourself with it. Research with it. Prepare with it. Proofread, translate, clarify, and shorten with it.
+**Human messages are human-written.**  
+**AI-assisted work is visibly marked.**  
+**Human responsibility is never delegated.**
 
-But don't outsource your voice, judgment, effort, or relationship with another person.
-
-**Be the author.**  
-**Be able to defend it.**  
-**Be present with the person.**
-
-*Think with AI. Speak for yourself.*
+*Speak to people yourself. Mark AI in the work.*
